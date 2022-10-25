@@ -1,0 +1,389 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(255, 0, 0); */
+}
+
+html, body {
+    font-family: "Helvetica";
+    max-width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* root */
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.navbar.actives {
+    right: 0;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#082032e5;
+    /* -webkit-backdrop-filter: blur(50px); */
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    width: 100%;
+}
+
+.nav-menu .navbar.nav {
+    background:#082032e5;
+    backdrop-filter: blur(5px);
+}
+
+main {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(0,0,0,0.5)50%), url(/project/assets/img/hero-edit.jpg);
+    /* background-position: cover; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+/* MOBILE CSS */
+
+/* navbar */
+.header {
+    padding: .7rem 1rem;
+    background-color: transparent;
+    color: #EEEEEE;
+    width: 100%;
+    position: fixed;
+}
+
+span {
+    color: #FF4C29;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav-menu .navbar.show{
+    right: 0;
+} 
+.nav-menu .navbar .navlink.hide{
+    right: 100%;
+}
+.nav-menu .navbar{
+    position: absolute;
+    padding: 10px 20px;
+    width: 100%;
+    height: 500%;
+    background-color: #082032;
+    right: 100%;
+    top: 43px;
+    text-align: center;
+    transition: all 0.5s;
+    /* display:none; */
+}
+
+.nav-menu .navbar li, .navlink{
+    list-style: none;
+    text-decoration: none;
+    color: #EEEEEE;
+    margin: 1rem 0;
+}
+
+.nav-menu .navbar li .navlink:hover {
+    color: #FF4C29;
+}
+
+.nav-menu .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu .navbar a {
+    font-size: 15px;
+    /* background-color: aquamarine; */
+}
+.nav-menu .navbar li.active {
+    width: auto;
+    position: relative;
+
+    /* width: 15px */
+}
+
+.nav-menu .navbar li.active::before {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 2.4px;
+    border-radius: 10px;
+    background-color: #FF4C29;
+    top: 18px;
+    /* left: 150px; */
+}
+
+.menu > .satu, .dua, .tiga {
+    display: block;
+    margin: 3px 0;
+    width: 15px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: #EEEEEE;
+}
+
+/* animasi hamburger */
+.menu:hover {
+    cursor: pointer;
+}
+/* end */
+
+/* end navbar */
+
+/* hero section */
+.hero-section {
+    padding: 4rem 1rem;
+    color: #EEEEEE;
+}
+
+.hero {
+    padding: 2rem 0;
+}
+
+.text {
+    width: 100%;
+    margin-bottom: 12rem;
+}
+
+.text > h3 {
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+.text > p {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.text .button {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.text .button > h6:nth-child(1) {
+    padding: 10px 20px;
+    background-color: #FF4C29;
+    border-radius: 2px
+}
+
+.text .button > h6:nth-child(2) {
+    padding: 10px 20px;
+    border: 1.8px solid #FF4C29;
+    border-radius: 2px
+}
+
+.text .button > h6 > a {
+    color: #EEEEEE;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+
+.image {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.image > img {
+    width: 100%;
+    filter: brightness(50%);
+}
+/* end hero section */
+
+/* About Section */
+.about-section {
+    /* position: relative; */
+    padding: 1rem 1rem;
+}
+
+.about {
+    padding: 2rem 0;
+}
+
+.grid-about {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.left-about {
+    width: 100%;
+    color: #082032;
+}
+
+.left-about > h4 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.left-about > p {
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.left-about .box {
+    padding: 1rem 1rem;
+    background-color: #0820320e;
+    margin-bottom: 2rem;
+    border-radius: 3px;
+}
+
+.left-about .box > h3 {
+    color: #FF4C29;
+    font-size: 25px;
+    margin-bottom: .5rem;
+}
+
+.left-about .box > p {
+    font-size: 16px;
+    color: #08203298;
+}
+
+.right-about {
+    color: #082032;
+}
+
+.right-about .one {
+    margin-bottom: 1rem;
+}
+.right-about .one > h4 {
+    font-size: 19px;
+}
+
+.right-about .one > p {
+    font-size: 15px;
+}
+
+.right-about .two {
+    margin-bottom: 1rem;
+}
+
+.right-about .two > h4 {
+    font-size: 19px;
+}
+
+.right-about .two > p {
+    font-size: 15px;
+}
+
+.right-about .three> h4 {
+    font-size: 19px;
+}
+
+.right-about .three > p {
+    font-size: 15px;
+}
+/* end About Section */
+
+/* Gallery Section */
+.gallery-section {
+    padding: 1rem 1rem;
+    color: #EEEEEE;
+    background-color: #082032;
+}
+
+.gallery-section .gallery .top-gallery > h4 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.gallery-section .gallery .top-gallery > p {
+    font-size: 15px;
+    margin-bottom: 3rem;
+}
+
+.gallery-section .gallery .image-gallery .gambar-1, .gambar-2, .gambar-3, .gambar-4{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.gallery-section .gallery .image-gallery .gambar {
+    position: relative;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.gallery-section .gallery .image-gallery .gambar > .desc {
+    position: absolute;
+    background-color: #08203265;
+    padding: 0rem 1rem;
+    padding-top: 17rem;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    transition: all .5s;
+}
+
+.gallery-section .gallery .image-gallery .gambar:hover .desc {
+    bottom: 0;
+}
+
+.gallery-section .gallery .image-gallery img{
+    width: 100%;
+    height: 100%;
+}
+
+.button-gallery {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.button-gallery a{
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #EEEEEE;
+    background-color: #FF4C29;
+}
+/* end Gallery Section */
+
+/* Footer */
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p, a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #082032;
+}
+footer a {
+    color:#FF4C29;
+    font-weight: 600;
+}
+/* end Footer */
+/* END MOBILE CSS */
+
+/* Desktop Css */
+@media screen and (min-width:768px){
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+    .header, .hero-section, .about-section {
+        padding: 2rem 4rem;
+    }
+}
