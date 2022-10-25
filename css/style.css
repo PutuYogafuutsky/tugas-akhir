@@ -302,6 +302,10 @@ span {
     background-color: #082032;
 }
 
+.gallery {
+    padding: 2rem 1rem;
+}
+
 .gallery-section .gallery .top-gallery > h4 {
     font-size: 20px;
     margin-bottom: 1rem;
