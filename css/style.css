@@ -154,7 +154,7 @@ span {
 }
 
 .hero {
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .text {
@@ -297,7 +297,7 @@ span {
 
 /* Gallery Section */
 .gallery-section {
-    padding: 1rem 1rem;
+    padding: 3rem 1rem;
     color: #EEEEEE;
     background-color: #082032;
 }
